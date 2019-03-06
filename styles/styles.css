@@ -91,7 +91,7 @@ main figure .productName {
   position: absolute;  /* I'm using this rule to position the element over the parent element */
   top: 0px;
   height: auto;
-  background-color: rgba(199, 199, 199, 0.71); /* This format to have opacity in bg color*/
+  background-color: rgba(199, 199, 199, 0.75); /* This format to have opacity in bg color*/
   padding: 10px;
   font-size: 10px;
   width: 100%;
@@ -119,12 +119,12 @@ main figure img {
   width: 100%;
 }
 
-/* Slider */
-main figure:hover .show {
+/* Rules - when the user hover the mouse */
+main figure:hover .overlayProduct {
   display: block;
 }
 
-main figure .show {
+main figure .overlayProduct {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.42);
   width: 100%;
@@ -133,7 +133,7 @@ main figure .show {
   display: none;
 }
 
-main figure .show .showMore {
+main figure .overlayProduct .showMore {
   position: absolute;
   color: white;
   text-transform: capitalize;
@@ -147,6 +147,27 @@ main figure .show .showMore {
   text-decoration: none;
   font-size: 14px;
 }
+
+/* Rules for carousel images */
+.carouselProducts {
+  display: none;
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.showCarousel {
+  display: block;
+}
+
 
 /* Im using mediaqueries to set some rules in mobile:
 apply this css rules on screens that are 768px or less */
