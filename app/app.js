@@ -71,7 +71,6 @@
     let [parentNodeElement, parentIndex] = this.parentNode.id.split('|'); // Destructuring [id, index]
     carouselProductsElement.classList.add('showCarousel'); // Adding class to show carousel
 
-    // thumbnailsData carouselElement add active class to first.....
     if (!elementsCreated) {
       thumbnailsData.forEach((thumbnail, index) => {
         const { href: thumbnailHref } = thumbnail; // Obtaining the href of thumbnail
@@ -116,14 +115,13 @@
     elementsCreated = true;
   };
 
-  // then calling the function showCarousel to obtain the clicked parent clicked id
+  // Then calling the function showCarousel to obtain the clicked parent clicked id
   for (let i = 0; i < productOverlayElement.length; i++) {
     productOverlayElement[i].addEventListener('click', showCarousel, false);
   }
 
   // Handling DOM events
   closeElement.addEventListener('click', function() {
-    console.log('thumbnailsData', thumbnailsData);
     carouselProductsElement.classList.remove('showCarousel');
   }, false);
 })();
