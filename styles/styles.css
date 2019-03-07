@@ -65,7 +65,7 @@ header .navigation ul li a:hover {
 
 /* I use the CSS Grid: Layout Module that offers a grid-based layout system,
 with rows and columns */
-main {
+.main {
   display: grid;
   grid-auto-rows: auto; /* Our auto row size */
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /*Our auto columns */
@@ -77,17 +77,17 @@ main {
   width: 100%;
 }
 
-main figure {
+.main figure {
   color: #fff;
   margin: 0;
   position: relative;
 }
 
-main figure:hover {
+.main figure:hover {
   cursor: pointer;
 }
 
-main figure .productName {
+.main figure .productName {
   position: absolute;  /* I'm using this rule to position the element over the parent element */
   top: 0px;
   height: auto;
@@ -100,7 +100,7 @@ main figure .productName {
   text-transform: uppercase;
 }
 
-main figure .productPrice {
+.main figure .productPrice {
   position: absolute;  /* I'm using this rule to position the element over the parent element */
   bottom: 15px;
   left: 20px;
@@ -113,18 +113,18 @@ main figure .productPrice {
   text-transform: uppercase;
 }
 
-main figure img {
+.main figure img {
   display: block;
   margin: 0 auto;
   width: 100%;
 }
 
 /* Rules - when the user hover the mouse */
-main figure:hover .overlayProduct {
+.main figure:hover .overlayProduct {
   display: block;
 }
 
-main figure .overlayProduct {
+.main figure .overlayProduct {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.42);
   width: 100%;
@@ -133,7 +133,7 @@ main figure .overlayProduct {
   display: none;
 }
 
-main figure .overlayProduct .showMore {
+.main figure .overlayProduct .showMore {
   position: absolute;
   color: white;
   text-transform: capitalize;
@@ -168,7 +168,17 @@ main figure .overlayProduct .showMore {
   display: block;
 }
 
+.hideCarousel {
+  display: none;
+}
 
+.carouselProducts .close {
+  position: absolute;
+  top: 30px;
+  right: 60px;
+  color: white;
+  font-size: 30px;
+}
 /* Im using mediaqueries to set some rules in mobile:
 apply this css rules on screens that are 768px or less */
 @media screen and (max-width: 768px) {

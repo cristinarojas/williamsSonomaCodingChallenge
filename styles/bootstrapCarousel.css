@@ -1,0 +1,39 @@
+/* overriding carousel bootstrap rules to adjust customize carousel */
+#carouselExampleIndicators img {
+  margin: 0 auto;
+}
+
+.carousel { /* Set the carousel vertical align middle */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-indicators li { /* Set my own css rules to indicators */
+  height: 25px !important;
+  width: 25px !important;
+  border-radius: 50% !important;
+  border-bottom: inherit !important;
+  border-top: inherit !important;
+}
+
+.carousel-indicators {
+  bottom: -50px !important;
+}
+
+.carousel-control-next {
+  height: 50px !important;
+  width: 50px !important;
+  top: 50% !important;
+  border-radius: 25px !important;
+  background-color: rgba(214, 214, 214, 1) !important;
+  right: 1.5% !important;
+}
+
+.carousel-control-prev {
+  height: 50px !important;
+  width: 50px !important;
+  top: 50% !important;
+  border-radius: 25px !important;
+  background-color: rgba(214, 214, 214, 1) !important;
+  left: 1.5% !important;
+}
