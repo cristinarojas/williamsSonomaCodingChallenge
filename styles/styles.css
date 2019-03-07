@@ -182,7 +182,13 @@ with rows and columns */
   color: white;
   font-size: 30px;
 }
-/* Im using mediaqueries to set some rules in mobile:
+
+.carouselProducts .close:hover {
+  color: white;
+  cursor: pointer;
+}
+
+/*** Responsive experience – 1 column on mobile to 3 columns on desktop ***
 apply this css rules on screens that are 768px or less */
 @media screen and (max-width: 768px) {
   header .logo img {
